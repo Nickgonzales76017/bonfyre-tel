@@ -1,0 +1,11 @@
+# Build outputs
+*.o
+*.a
+*.so
+*.dylib
+/cmd/bonfyre-tel/bonfyre-tel
+
+# Temp/output
+tmp/
+dist/
+build/
