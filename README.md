@@ -1,37 +1,25 @@
-# bonfyre-tel
+<p align="center"><img src="https://github.com/user-attachments/assets/7785a8d6-6e28-4892-8958-3daf85414f05" width="80" alt="Bonfÿre knight" /></p>
 
-Telephony entry repo for Bonfyre.
+# Bonfÿre Telephony
 
-This repo is a public entry vector for the telephony surface:
+**A native telephony and verification adapter.**
 
-- FreeSWITCH Event Socket listener
-- SIP/SMS/MMS call flows
-- mock server for zero-cost testing
-- SQLite-backed call and message logging
-- verification code workflows
+Developers integrating with an authorized FreeSWITCH/Event Socket installation.
 
-## Why This Exists
+## Source and scope
 
-The live `BonfyreTel` runtime currently lives in:
+This repository preserves an **April 2026 source extraction**. It contains `cmd/bonfyre-tel/` and its deployment notes. That material remains useful for inspection and for understanding a component boundary, but it is not the latest canonical source or an independently supported package release.
 
-- `/Users/nickgonzales/Projects/bonfyre-oss/cmd/BonfyreTel`
+The [current Bonfÿre development lineage](https://github.com/Nickgonzales76017/bonfyre) owns the integrated version: [`cmd/BonfyreTel/`](https://github.com/Nickgonzales76017/bonfyre/tree/main/cmd/BonfyreTel/). Later source changes are reviewed and published separately from private runtime state.
 
-This repo gives that surface its own clear entry point so the Bonfyre page can link to it directly.
+The older extraction kept temporary vendored dependencies and original migration notes. They are not an additional source of truth; check the [current repository](https://github.com/Nickgonzales76017/bonfyre) for the version, license, operating contract and tests relevant to your use.
 
-## Current Layout
+## See the work in context
 
-- `cmd/bonfyre-tel/`
-  - extracted telephony binary source and deploy examples
-- `docs/`
-  - extraction notes
+- [Aurekai work samples](https://aurekai-work-samples.pages.dev/) — customer-facing tools and handoffs
+- [Bonfÿre developer and product guides](https://docs.aurekai.work/) — integrated operations and technical contexts
+- [Client integration examples](https://github.com/Nickgonzales76017/bonfyre/blob/main/docs/client-operations-portfolio.md) — real kinds of receiving-system work
 
-## Dependency Note
+For an **independently scoped native-C example** with its own build and verification fixtures, see [Bonfÿre Statement Import](https://github.com/Nickgonzales76017/bonfyre-statement-import).
 
-`bonfyre-tel` is lighter than the other new entry repos.
-
-It currently builds with:
-
-- system sockets/network headers
-- `sqlite3`
-
-It does not currently need a vendored `bonfyre-core` slice for local extraction validation.
+The license accompanying this extraction governs its own files; the canonical repo and independent components may have different terms.
